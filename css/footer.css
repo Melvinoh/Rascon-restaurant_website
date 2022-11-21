@@ -1,0 +1,38 @@
+footer{
+    margin: 5px;
+    padding: 2px;
+    background-color: rgb(51, 2, 61);
+}
+.footer{
+    padding: 0.2rem;
+    margin: 0.2rem;
+    right: 25%;left: 15%;
+}
+footer h3{
+    color:aliceblue;
+    text-align: center;
+    text-decoration: underline;
+    margin:0%;padding:0;
+}
+footer .foot{
+    margin: 2rem;
+}
+footer .foot a{
+    display: block;
+    color: aliceblue;
+ }
+ footer .foot a:hover{
+    color: rgb(240, 69, 174);
+    transform: translateX(10px);
+    
+ }
+ footer .foot  a i{
+    margin-left: 5px;
+ }
+ footer .footer{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+    flex: auto;
+    align-items: center;
+ }

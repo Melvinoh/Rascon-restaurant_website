@@ -1,0 +1,272 @@
+
+</html>
+<script>
+    function show_cart(){
+        $(document).ready(function({
+            $.ajax({
+            method:"post",
+            url:"cart_data.php",
+            success:function(data){
+                $("#cart").html(data)
+
+            }
+        });
+        }));
+    };
+    $(document).on("click","#addcart",function(){
+        var id = $(this).attr('id');
+        var name =$('#name').val();
+        var price = $('#price').val();
+        $.ajax({
+            method:"POST",
+            url:"cart_data.php",
+            data:{foodid:id,foodname:name,price:price,quantity:quantity},
+            sucess:function(data){
+                alert(item added to cart);
+            }
+        })
+
+
+    })
+</script>
+<script>
+        function show_cart(){
+            $(document).ready(function({
+                $.ajax({
+                method:"post",
+                url:"cart_data.php",
+                success:function(data){
+                    $("#cart").html(data)
+
+                }
+            });
+            }))
+        };
+</script>
+<script>
+    $(document).ready(
+        $('#addcart').on("click",function(){
+            var id = $('#id').val();
+            var name =$('#name').val();
+            var image= $('#img').val();
+            var price= $(#price).val();
+            var submit=$('#addcart').val();
+            $.ajax({
+                method:"POST",
+                url:"cart_data.php",
+                data:{foodid:id,
+                    foodname:name,
+                    image:image,
+                    price:price,
+                    addcart:submit
+                },
+                sucess:function(data){
+                    alert(item added to cart);
+                }
+            });
+        });
+    );
+</script>
+<script>
+    $(document).ready(function(){
+            $(".formdata").on("submit", function(event){
+                event.preventDefault();
+        
+                var formValues= $(this).serialize();
+        
+                $.post("cart_data.php?q=addtocart", formValues, function(data){
+                    // Display the returned data in browser
+                    alert('item added succeffully');
+                    $("#cart").html(data);
+                });
+            });
+        });
+    </script>
+    <script>
+            $(document).ready(
+                $('.addcart').on("click",function(){
+                    
+                    $('#cart').html(great);
+                })
+            );
+        </script>           
+    </body>
+    <script>
+    $(document).ready(
+        $('.addcart').on("click",function(){
+            var id = $('.id').val();
+            var name =$('.name').val();
+            var image= $('.img').val();
+            var price= $('.price').val();
+            var submit=$('.addcart').val();
+            $.ajax({
+                method:"POST",
+                url:"cart_data.php?addtocart",
+                data:{foodid:id,
+                    foodname:name,
+                    image:image,
+                    price:price,
+                    addcart:submit
+                },
+                success:function(data){
+                    alert('item added to cart');
+                }
+            })
+        })
+    );
+</script>
+class localcart{
+    static key ="cartitems"
+    static getlocalcartitems(){
+           let cartMap = new Map()  
+        const cart=localStorage.getItem(key)
+        if (cart ==null || cart.length === 0) return cartmap
+            return new Map(Object.entries(JSON.parse(cart)))
+    }
+    static additemstolocalcart(id ,item){
+        let cart = localcart.getlocalcartitems()
+        if(cart.has(id)){
+            let mapItem = cart.get(id)
+            mapItem.quantity+=1
+            cart.set(id,mapItem)
+        }else{
+            cart.set(id,item)
+            
+            localStorage.setItem(key, JSON.stringify(Object.fromEntries(cart))) 
+        updatetocartui()
+        }
+    }
+    static removeitemfromcart(id){
+        let cart = localcart.getlocalcartitems()
+        if(cart.has(id)){
+            let mapItem =cart.get(id)
+            if(mapitemquantity>1){
+                mapItem.quantity-=1
+                cart.set(id,mapItem)
+            }else{
+                cart.delete(id)
+            }
+        }
+        if (cart.length === 0){
+            localStorage.clear()
+        }else{
+            localStorage.setItem(key, JSON.stringify(Object.fromEntries(cart))) 
+        updatetocartui()
+        }
+
+         
+    }
+}
+class cartitem{
+    constructor(name ,img, price){
+        this.name = name
+        this.img =img 
+        this.price=price
+        this.quntity=1
+    }
+}
+$('.addcart').on('click',function(){
+    var foodid = $(this).siblings('id').val();
+    var foodname = $(this).siblings('.name').val();
+    var image = $(this).siblings('img').val();
+    var price = $(this).siblings('.price').val();
+    $.post('cart_data?q=addtocart',
+        {
+            foodid:price,
+            foodname:foodname,
+            image:image,
+            price:price,
+
+        },
+        function(){
+            alert("item added succefully")
+        }
+    );
+})
+
+
+
+
+
+if (!isset($_SESSION['cart'])){
+    $_SESSION['prodid'] = 0;
+    $_SESSION['cart']= array();
+    $q = $_GET['q'];
+
+    $rascon = new shopping;
+
+    if($q == 'addtocart'){
+        $rascon->addtocart();
+    };
+}else {
+    if (isset($_POST['foodid'])){       
+        $q = $_GET['q'];
+        $rascon = new shopping;
+        if($q == 'addtocart'){
+            $rascon->addtocart();
+            //unset($_SESSION['cart']);   
+        };
+    }
+        
+}
+class shopping {
+    function addtocart(){
+        $id = $_POST['foodid'];
+        $img =$_POST['image'];
+        $food_name =$_POST['foodname'];
+        $price =$_POST['price'];
+        $qty = 1;
+        $total = $qty ;
+        
+
+        $item_cart_id = array_column($_SESSION['cart'],'name');
+        $count = count($_SESSION['cart']);
+        $_SESSION['count'] = $count + 1; 
+        $cart = array(
+           'n.o'=> $_SESSION['count'],
+            'img'=>$img,
+            'name'=>$food_name,
+            'price'=>$price,
+            'qty'=>$qty,
+            'total'=>$total,
+        );
+        if (!in_array($food_name,$item_cart_id)){
+             //$_SESSION['cart'][]= $cart;
+             array_push($_SESSION['cart'],$cart);
+        }
+    }
+
+
+
+
+
+
+    $(document).ready(function(){
+        $(".remove").on("click", function(){
+            var action = emptycart
+            var id = <?php $value=['name']?>
+            $.post("action.php?q=emptycart",{action, id}, function(data){
+                alert(are you sure you want to remove from cart)
+            });
+        });
+    });
+    $(document).ready(function(){
+        $(".remove").on("click", function(){
+            var action = emptycart
+            var id = <?php $value=['name']?>
+            $.post("action.php?q=emptycart",{action, id}, function(data){
+                alert(are you sure you want to remove from cart)
+            });
+        });
+    });
+<
+
+
+    
+
+
+        
+
+
+
+

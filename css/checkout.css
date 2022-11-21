@@ -1,0 +1,11 @@
+button{
+    color: white;
+    box-shadow: 1px 4px  4px 0.5px rgba(6, 17, 170, 0.37);
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
+    border-top: 1px solid rgba(145, 6, 6, 0.651);
+}
+button:hover{
+    box-shadow: 0.5px 1px  1px 0.5px rgba(6, 17, 170, 0.37);
+}

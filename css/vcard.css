@@ -1,0 +1,18 @@
+.vcard{
+    background-color: rgb(46, 15, 75);
+    color: white;
+    padding-right:10%;
+    padding-left: 0%;
+    width:370px;
+}
+.vcard img{
+    color: blueviolet;
+    margin:10px;
+    width: 100px;
+    height: 50px;
+
+}
+ .vcard input{
+    width:100%;
+
+}

@@ -1,0 +1,243 @@
+
+
+.mcontainer{
+    display: flex;
+}
+
+
+/* side bar section */
+.sidebar{
+    position: relative;
+    top:10px;left: 5px;right: 100%;
+    width:70%;
+    margin-top: 10px;
+    background-color: rgba(254, 254, 255, 0.219);
+    box-shadow: 1px 8px 3px 0 rgba(23, 2, 109, 0.37);
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    backface-visibility: unset;
+    
+    border-top:solid 3px rgba(201, 159, 195, 0.486) ;
+}
+.sidebar .search{
+    margin: 10px auto;
+    padding: 10px;
+    width: 95%;
+}
+
+
+.sidebar .profile span{
+    margin: 10px;
+    padding: 5px;
+}
+
+.sidebar .filter{
+    margin: 10px auto;
+    background-color: rgb(92, 16, 66);
+    padding: 10px;
+    width: 92%;
+    border-radius: 10px;
+}
+.sidebar .filter div{
+    background-color: rgba(240, 248, 255, 0.973);
+    margin: 0px auto 10px auto;
+    padding: 10px;
+    width: 95%;
+
+    box-shadow: 3px 2px 1px 0 rgba(4, 12, 126, 0.37);
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
+    border-top: 3px solid rgba(138, 5, 5, 0.18);
+}
+.sidebar  input{
+    width: 95%;
+    border-radius: 5px;
+    margin: 2px auto;
+    padding: 5px;
+}
+.sidebar .filter a {
+    display: block;
+    margin: 5px;
+    padding: 5px;
+    text-decoration: none;
+    color: rgb(12, 12, 65);
+    text-align: center;
+}
+.sidebar i{
+    color: rgb(242, 245, 247);
+    padding: 2px;
+
+}
+.sidebar .mcategories a{
+
+    text-decoration: none;
+    font-size: small;
+    color: blueviolet;
+}
+.sidebar .mcategories{
+    margin: 10px auto;
+    padding: 5px;
+    width: 90%;
+    border:solid 2px  rgb(235, 235, 250);
+    border-radius: 10px;
+
+    box-shadow: 3px 2px 1px 0 rgba(4, 12, 126, 0.37);
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
+    border-top: 3px solid rgba(138, 5, 5, 0.18);
+    
+}
+.sidebar .mcategories .mcat {
+    margin: 10px auto;
+    width: 85%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 2px 0px;
+   
+    clear: left;
+    height: wrap-content;
+
+}
+.sidebar .mcategories .mcat  img{
+    width: 20%;
+    margin: 3px;
+    float: left;
+    margin: 5px;
+    position:relative;
+    border-radius: 10px;
+}
+.sidebar .vcart{
+    margin: 10px;
+    padding: 10px;
+    display: inline-block;
+
+
+}
+.sidebar .vcart i {
+    color: blue;
+}
+
+/* deals section*/
+
+.mcontainer .mcontent{
+    margin: 10px ;
+}
+ .mcontent .deals{
+    padding: 3rem 1rem;
+    margin: 0;
+    display: flex;
+    overflow-x: hidden;
+    position: relative;
+    z-index: 200;
+
+    @media only screen and (max-width: 600px) {
+        flex-direction: column;
+    }
+
+}
+
+.deals .dcard{
+    width: 70%;
+    margin:5px auto;
+    min-width: 100px;
+    width: 50%;
+    min-height: 300px;
+    box-shadow: -2rem 0 5rem -0.5rem rgb(128, 124, 124);
+    padding: 1.0rem;
+    color: rgb(66, 3, 68);
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s;
+    margin: 0;
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.603);
+    backdrop-filter: blur(20px);
+    position: relative;
+
+    @media only screen and (max-width: 600px) {
+        box-shadow: 0rem -20px 3rem -1rem #000;
+    }
+  
+}
+.deals .dcard:hover {
+    transform: translateY(-2rem) rotate(5deg);
+    z-index: 100;
+  }
+
+  .deals .dcard:first-child:hover {
+    transform: translate(-1rem -0.5rem) rotate(5deg);
+
+  }
+
+  .deals .dcard:not(:first-child) {
+    margin-left: -100px;
+    box-shadow: -3rem 0 3rem -2rem rgb(51, 50, 50);
+ 
+
+  }
+
+.deals .dcard img{
+    width: 80%;
+    border-radius: 10px;
+    margin: 5px;
+
+}
+@media only screen and (max-width: 600px) {
+    .deals .dcard{
+        box-shadow: 0 #000;
+        width:100%;
+        height: 100%;
+       
+    }
+    .mcontent .deals{
+        padding: 3rem 0.5rem 3rem 0.5rem;
+    }
+    .deals .dcard:not(:first-child){
+        margin-left: -65px;
+        box-shadow: 2px 4px 3px 2px rgba(0, 0, 0, 0.363);
+        
+    }
+    .deals .dcard:not(:first-child):hover{
+        margin-left: -65px;
+        box-shadow: 2px 4px 3px 2px rgba(0, 0, 0, 0.788);
+        
+    }
+    .deals .dcard:first-child{
+        
+        box-shadow: 2px 4px 3px 2px rgba(0, 0, 0, 0.719);
+        background-color: rgba(240, 248, 255, 0.26);
+    }
+
+    .sidebar{
+        display: none;
+    }
+
+}
+.mcontainer .menu{
+    margin: 0.2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(4.0cm ,1fr));
+    gap: 10px;
+
+
+}
+.mcontainer .menu {
+    margin: 0.5rem 0;
+    border-radius: 20px;
+    justify-content: center;
+    height: 125vh;
+    overflow: scroll;
+    border-top: solid 3px rgba(163, 40, 163, 0.267);
+  
+}
+.mcontainer .menu img{
+    border-radius: 10px;
+}
+
+.myswipe3 .swiper-slide {
+    height: calc((100% - 30px) / 2)
+}

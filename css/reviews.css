@@ -1,0 +1,274 @@
+
+@media (max-width:430px) {
+    .rv h3{
+        font-size: 5vw;
+    }
+    .reviews .swiper-slide{
+        font-size: 20vw;
+        width: 100%;
+    }
+    .reviews .swiper-slide h5{
+        font-size: 5vw;
+    }
+}
+
+.revs-container{
+    margin-top: 20px;
+}
+.revs-container h2{
+    width: 90%;
+    color: white;
+    text-align: center;
+    text-decoration: underline rgb(241, 236, 239);
+    margin: 25px auto  ;
+    font-size: vw;
+
+    background: rgba(81, 1, 112, 0.945);
+    box-shadow: 1px 4px 3px 0 rgba(20, 2, 92, 0.466);
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+.rv {
+    margin: 40px auto;
+    width: 95%;
+
+    height: fit-content;
+
+   
+  
+}
+.reviews .swiper-slide{
+    font-size: vw80;
+    padding: 10px;
+    margin: 10px ;
+    height: 250px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+
+    background: rgba(253, 244, 244, 0.3);
+    box-shadow: 1px 8px 3px 0 rgba(23, 2, 109, 0.37);
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    backface-visibility: unset;
+    
+    border-top:solid 3px rgba(121, 64, 113, 0.247) ;
+  
+    color:rgb(54, 7, 82);
+
+} 
+
+.reviews .swiper-slide img{
+    float: left;
+    width: 50%;
+    height:50%;
+    border-radius: 10px;
+    max-width: 100px;
+    margin:0 auto;
+}
+.reviews .swiper-slide h5{
+    border-bottom: solid 2px aliceblue;
+    padding-left:0.3rem;
+    margin-top: 0.3rem;
+    box-shadow: 0rem 0.2rem 0.5rem var(--headings);
+}
+.swiper-slide .content p{
+    text-align: center;
+}
+.reviews .review:hover{
+    background-color: aliceblue;
+    color: rgb(110, 6, 93);
+    transform: translateX(2px);
+
+   
+} 
+.rv h3{
+    text-align: center;
+    background-color: rgb(61, 4, 107);
+    color: var(--headings);
+    box-shadow: 0rem 0.2rem 0.5rem var(--headings);
+    width: 80%;
+    margin: 30px auto 5px auto;
+    background: rgba(253, 244, 244, 0.3);
+    box-shadow: 1px 5px 3px 0 rgba(23, 2, 109, 0.37);
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    backface-visibility: unset;
+    
+    border-top:solid 3px rgba(121, 64, 113, 0.247) ;
+  
+
+}
+
+
+
+
+
+.star-rating {
+    margin: 10px 0 0px;
+   font-size: 0;
+   white-space: nowrap;
+   display: inline-block;
+   width: 175px;
+   height: 35px;
+   overflow: hidden;
+   position: relative;
+   background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjREREREREIiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');
+   background-size: contain;
+ }
+ .star-rating i {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 20%;
+    z-index: 1;
+    background: url('data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjBweCIgaGVpZ2h0PSIyMHB4IiB2aWV3Qm94PSIwIDAgMjAgMjAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwIDIwIiB4bWw6c3BhY2U9InByZXNlcnZlIj48cG9seWdvbiBmaWxsPSIjRkZERjg4IiBwb2ludHM9IjEwLDAgMTMuMDksNi41ODMgMjAsNy42MzkgMTUsMTIuNzY0IDE2LjE4LDIwIDEwLDE2LjU4MyAzLjgyLDIwIDUsMTIuNzY0IDAsNy42MzkgNi45MSw2LjU4MyAiLz48L3N2Zz4=');
+    background-size: contain;
+    color: yellow;
+  }
+
+ .star-rating input {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    opacity: 0;
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    position: relative;
+  }
+
+  .star-rating input:hover + i,
+.star-rating input:checked + i {
+  opacity: 1;
+}
+.star-rating i ~ i {
+  width: 40%;
+}
+.star-rating i ~ i ~ i {
+  width: 60%;
+}
+.star-rating i ~ i ~ i ~ i {
+  width: 80%;
+}
+.star-rating i ~ i ~ i ~ i ~ i {
+  width: 100%;
+}
+
+.leave-rv form{
+    text-align: center;
+    width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+    color: var(--maincolor);
+    font-size: large;
+
+    background: rgba(253, 244, 244, 0.342);
+    box-shadow: 2px 5px 3px 0 rgba(23, 2, 109, 0.37);
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.247);
+    backface-visibility: unset;
+    
+    border-top:solid 3px rgba(121, 64, 113, 0.247) ;
+    
+    border-right:solid 4px rgba(121, 64, 113, 0.247);
+
+}
+textarea{
+    width: 100%;
+    background: none;
+    color: rgb(2, 24, 44);
+}
+.leave-rv form .input{
+    margin: 5px;
+  
+  
+}
+.leave-rv form .input input{
+    background: none;
+    color: rgb(2, 34, 61);
+}
+form .f2{
+    text-align: left;
+}
+form  .meals{
+    height: 30%;
+    background: none;
+    color: rgb(2, 41, 75);
+}
+
+
+
+
+.contacts .raw{
+    display: flex;
+    flex-wrap: wrap;
+    background-color:rgb(102, 25, 102);
+    padding: 1.0rem;
+    margin: 0.5rem;
+    flex: auto;
+}
+.contacts .raw form{
+    flex: 1 1 15rem;
+    width: 300px;
+}
+.contacts .concat .raw form .inputbox{
+    display: flex;
+    align-items: center;
+    margin-top:0.5rem;
+    margin-bottom:0.5rem;
+    background-color: rgb(33, 5, 59);
+    border:solid 1px, white 2px;
+    padding:0.5rem;
+}
+.contacts .concat .raw form .inputbox span{
+    font-size: 1rem;
+    padding-right:0.5rem;
+    color: white;
+    padding: 0.5rem;
+}
+.contacts .raw form .inputbox input {
+    color: white;
+    padding: 0.5rem;
+    font-size: 0.5rem;
+    background: none;
+    border: none;
+    width:100%;
+}
+.contacts .concat .raw h4 {
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    text-decoration: underline;
+
+}
+.follow a{
+    display: block;
+    color: white;
+    margin:0.5rem;
+    padding: 0.5rem;
+    background-color: rgb(33, 5, 59);
+}
+.concat h3{
+    text-align: center;
+    color: var(--headings);
+}
+.concat h2{
+    text-align: center;
+    color:var(--maincolor);
+    text-decoration: underline;
+    
+}

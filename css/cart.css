@@ -1,0 +1,58 @@
+.item{
+    display:flex;
+    background-color: rgb(250, 214, 238);
+    justify-content: space-between;
+    font-size:90%;
+    align-items: center;
+    box-shadow: 0.1rem 0.3rem 0.6em var(--boxshadow);
+    margin: 10px;
+
+}
+.cartitem{
+   
+    height:max-content;
+    font-size: 82%;
+   background-color: rgb(196, 245, 245);
+    margin-top: 5px;margin-left: 5px;margin-right: 10px;margin-bottom: 5px;
+    
+}
+ .cartitem img{
+    width: 70px;
+    height: 70px;
+    margin:5px;
+    border-radius: 50%;
+ }
+ .cartitem .food {
+    text-align: center;
+    font-weight: 400;
+ }
+
+ .cart-content{
+    margin-top: 2px;
+    padding:3px;
+ }
+ .cart-content p{
+    text-align: center;
+
+ }
+ .cart-content .state {
+    display: flex;
+    justify-content: space-between;
+    
+    margin: 6px;
+ }
+.cart-content div {
+    margin-right: 15px;
+}
+.cart-content div input{
+    width: 50px;
+}
+#cart_data .title h3{
+    color: var(--headings);
+    font-size: small;
+    text-align: center;
+    text-decoration: underline;
+}
+#cart_data .fa-times{
+   position: absolute;
+}

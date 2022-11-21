@@ -1,0 +1,333 @@
+.mtitle h1{
+    text-align: center;
+    color: white;
+    background-color: var(--maincolor);
+    text-decoration: underline;
+}
+.mtitle h1{
+    text-align: center;
+    color: white;padding:0;
+    margin-top: 1px;
+}
+.menu{
+    margin: 10px;
+    padding: 0.2rem;
+}
+
+
+
+/*meat category begins here*/
+#meatlovers{
+    background-color: rgb(248, 241, 246);
+    text-align: center;
+    margin: 0px;
+    width: 100%;
+    padding: 10px;
+    z-index: 20000;
+    
+}
+
+#meatlovers h2{
+    text-align: center;
+    color: rgb(107, 6, 6);
+}
+.meat_lovers{
+    margin: 5px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(4.0cm ,1fr));
+    gap: 10px;
+
+
+}
+.formdata .meat{
+    padding:5px;
+    text-align: center;
+    background-color: rgb(243, 197, 145);
+    width: 100%;
+    box-shadow: rgb(102, 15, 15) 0.1rem 0.3rem 0.6rem;
+    border-radius: 20px;
+}
+ .formdata .meat img{
+    width: 50%;
+    border-radius: 50%;
+    
+}
+.formdata a{
+    color: black;
+
+}
+.meat .fa-shopping-cart{
+    position: relative;
+    right: 2.5rem ;left:0.rem;top:7px;
+  
+}
+.meat .fa-heart{
+    position: relative;
+    right: 0 rem ;left:2.5rem;top:7px;
+   
+}.meat i{
+    color: brown; 
+}
+.meat h5{
+    color: var(--maincolor);
+    font-weight: bolder;
+    text-decoration: underline;
+    padding: 0.5rem;
+}
+.meat i:hover{
+   color: rgb(168, 24, 137);
+}
+
+
+
+/* chicken category begins here*/
+.formdata{
+    padding: 2px;
+    margin:2px;
+}
+.formdata .chicken{
+    
+    padding:5px;
+    text-align: center;
+    background-color: rgb(253, 255, 223);
+    width: 100%;
+    box-shadow: rgb(221, 23, 8) 0.1rem 0.3rem 0.6rem;
+    border-radius: 20px;
+}
+.formdata .chicken img{
+    width: 50%;
+    border-radius: 50%;
+    
+}
+.chicken .fa-heart{
+    position: relative;
+    right: 0 rem ;left:2.5rem;top:7px;
+   
+}.chicken i{
+    color: rgb(240, 148, 11);
+    font-weight: bolder;
+}
+.chicken h5{
+    color: var(--maincolor);
+    font-weight: bolder;
+    text-decoration: underline;
+    padding: 0.5rem;
+}
+.chicken i:hover{
+   color: rgb(184, 18, 175);
+}
+
+
+
+.chicken_dinner{
+    margin: 5px;
+    padding-left: 0.5rem;padding-right: 0.5rem;
+    display: flex;
+    flex :auto;
+    flex-wrap: wrap;
+}
+#chickendinner{
+    background-color: rgb(250, 144, 125);
+    text-align: center;
+    margin: 10px;
+}
+#chickendinner h5{
+    text-align: center;
+    color: rgb(205, 243, 66);
+}
+
+
+/*fish category begins here*/
+.formdata .fish{
+    padding:2px;
+    text-align: center;
+    background-color: rgba(236, 236, 253, 0.959);
+    width: 100%;
+    box-shadow: rgb(21, 48, 104) 0.1rem 0.3rem 0.6rem;
+    border-radius: 20px;
+}
+
+
+.formdata .fish img{
+    width: 40%;
+    border-radius: 50%;
+    
+}
+.fish .fa-heart{
+    position: relative;
+    right: 0 rem ;left:2.5rem;top:7px;
+   
+}.fish i{
+    color: rgb(219, 102, 6);
+    font-weight: bolder;
+}
+.fish h5{
+    color: var(--maincolor);
+    font-weight: bolder;
+    text-decoration: underline;
+    padding:2px;
+}
+.fish i:hover{
+   color: rgb(250, 24, 220);
+}
+
+
+.chicken_dinner{
+    margin: 5px;
+    padding-left: 0.5rem;padding-right: 0.5rem;
+    display: flex;
+    flex :auto;
+    flex-wrap: wrap;
+}
+#chickendinner{
+    background-color: rgb(250, 144, 125);
+    text-align: center;
+    margin: 10px;
+}
+#chickendinner h2{
+    text-align: center;
+    color: rgb(205, 243, 66);
+}
+.formdata .bevarage{
+    margin: 0.5rem;
+    padding: 0.2rem;
+    text-align: center;
+    background-color: rgb(4, 245, 85);
+    flex: auto;
+    width: 300px;
+    box-shadow: rgb(221, 23, 8) 0.1rem 0.3rem 0.6rem;
+    border-radius: 20px;
+}
+.bevarage img{
+    width: 200px;
+    border-radius: 50%;
+    
+}
+.bevarage .fa-heart{
+    position: relative;
+    right: 0 rem ;left:2.5rem;top:7px;
+   
+}.bevarage i{
+    color: rgb(240, 148, 11);
+    font-weight: bolder;
+}
+.bevarage h5{
+    color: var(--maincolor);
+    font-weight: bolder;
+    text-decoration: underline;
+    padding: 0.5rem;
+}
+.bevarage i:hover{
+   color: rgb(184, 18, 175);
+}
+
+
+/*rice category*/
+
+.formdata .rice{
+    padding:2px;
+    text-align: center;
+    background-color: rgba(223, 253, 225, 0.959);
+    width: 100%;
+    box-shadow: rgb(15, 119, 76) 0.1rem 0.3rem 0.6rem;
+    border-radius: 20px;
+}
+
+
+.formdata .rice img{
+    width: 40%;
+    border-radius: 50%;
+    
+}
+.rice .fa-heart{
+    position: relative;
+    right: 0 rem ;left:2.5rem;top:7px;
+   
+}
+.rice i{
+    color: rgb(207, 247, 63);
+    font-weight: bolder;
+}
+.rice h5{
+    color: var(--maincolor);
+    font-weight: bolder;
+    text-decoration: underline;
+    padding:2px;
+}
+.rice i:hover{
+   color: rgb(245, 217, 241);
+}
+
+/*stew categories */
+
+.formdata .stew{
+    padding:2px;
+    text-align: center;
+    background-color: rgba(245, 240, 179, 0.959);
+    width: 100%;
+    box-shadow: rgb(126, 206, 52) 0.1rem 0.3rem 0.6rem;
+    border-radius: 20px;
+}
+
+
+.formdata .stew img{
+    width: 40%;
+    border-radius: 50%;
+    
+}
+.stew .fa-heart{
+    position: relative;
+    right: 0 rem ;left:2.5rem;top:7px;
+   
+}
+.stew i{
+    color: rgb(247, 100, 63);
+    font-weight: bolder;
+}
+.stew h5{
+    color: var(--maincolor);
+    font-weight: bolder;
+    text-decoration: underline;
+    padding:2px;
+}
+.stew i:hover{
+   color: rgb(187, 28, 163);
+}
+
+/*noodels categories*/
+
+
+.formdata .rice{
+    padding:2px;
+    text-align: center;
+    background-color: rgba(223, 253, 225, 0.959);
+    width: 100%;
+    box-shadow: rgb(15, 119, 76) 0.1rem 0.3rem 0.6rem;
+    border-radius: 20px;
+}
+
+
+.formdata .noodels img{
+    width: 40%;
+    border-radius: 50%;
+    
+}
+.noodels .fa-heart{
+    position: relative;
+    right: 0 rem ;left:2.5rem;top:7px;
+   
+}
+.noodels i{
+    color: rgb(207, 247, 63);
+    font-weight: bolder;
+}
+.noodels h5{
+    color: var(--maincolor);
+    font-weight: bolder;
+    text-decoration: underline;
+    padding:2px;
+}
+.noodels i:hover{
+   color: rgb(245, 217, 241);
+}

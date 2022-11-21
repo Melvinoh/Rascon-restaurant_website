@@ -1,0 +1,355 @@
+
+:root{
+    --maincolor:rgb(168, 44, 168);
+    --headings:blueviolet;
+    --boxshadow:rgb(202, 57, 202);
+    
+    
+}
+*{
+    text-decoration: none;
+    text-transform: capitalize;
+    margin:0; padding: 0;
+    box-sizing: border-box;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* media queries*/
+
+html{
+    font-size:medium;
+    overflow-x: hidden;
+}
+html::-webkit-scrollbar{
+    width:0.2rem;
+}
+
+body{
+    background-image:url("./pictures/menu pictures/back 3.jpg");
+}
+/* header navigation starts here*/
+
+.header .title {
+    display: flex;
+    margin: 5px;
+    padding: 2px;
+    padding-right: 10px;
+    background-color: var(--maincolor);
+    font-size: medium;
+    border-radius: 10px;
+}
+.header .title i{
+   padding: 10px 5px;
+}
+.header nav {
+    padding:5px;
+    margin: 5px;
+    font-size:medium;
+    position: relative;
+    right: 10px;
+}
+.header nav a{
+    margin:5px;
+    color:rgb(119, 3, 9);
+    font-style: italic;  
+}
+.header nav a:hover{
+    background-color: white;
+    color: var(--maincolor);
+    border-bottom: solid 1px;
+    border-radius: 25%;
+}
+.header .title img{
+    width: 2rem;
+    height: 2rem;
+    border-radius:30%;
+}
+.header .icons i{
+    color: blue;
+    font-size: medium;
+}
+.header .icons span{
+    /*background-color: rgb(78, 3, 97);*/
+    color: var(--boxshadow);
+    position: relative;
+    bottom: 11px; right: 10px;
+    border-radius: 65%;
+    font-size: small;
+
+}
+.header .icons i:hover{
+    background-color: white;
+    color: var(--boxshadow);
+    border-radius: 20%
+}
+
+.cat_nav .cat{
+    float: left;
+    text-align: center;
+}
+
+/*category drop-down menu*/
+
+.cat_nav {
+    position: relative;
+    top: 8px;
+    display: inline-block;
+    z-index: 1;
+    padding-top: 0px;
+    text-decoration: none;
+ }
+ #category-nav a{
+     display: block;
+     text-decoration: none;
+     color: blueviolet;
+     padding: 10px 0px;
+     background-color: azure;
+ 
+ }
+ #category-nav{
+    position: absolute;
+    min-width: 6rem;
+    left: 70px;top: 30px;
+    display: none;
+    transform: scale(0);
+    background: rgba(253, 244, 244, 0.3);
+    box-shadow: 1px 8px 3px 0 rgba(23, 2, 109, 0.37);
+    backdrop-filter: blur( 10px );
+    -webkit-backdrop-filter: blur( 10px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    backface-visibility: unset;
+    
+    border-top:solid 3px rgba(194, 125, 185, 0.315) ;
+    color: rgb(50, 4, 94);
+}
+
+.cat_nav:not(:first-child):hover{
+   opacity: 1;
+}
+ 
+ /*header forms starts here */
+#category-nav.active,
+#searchform.actve,
+#login_form.active,
+#nav.active,
+#cart_data.active{
+    display: block;
+    transform: scale(1);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#create_account.active{
+    display: block;
+}
+
+
+/*login form starts here*/
+.modal {
+    text-align: center;
+    padding: 5px;
+    margin: 5px auto;
+    background-color: rgba(2, 2, 2, 0.295);
+    position: fixed;
+    top: 1.5cm;right:0;left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: none;
+    border: solid 2px rgba(128, 0, 128, 0.185);
+   
+}
+#alert{
+    color: white;
+    font-size: larger;
+}
+
+#login {
+    width: 300px;
+    margin: auto ;
+    background-color: rgb(250, 239, 249);
+    padding: 10px;
+    border: solid 2px rgba(128, 0, 128, 0.185);
+    box-shadow: 1px 1px 0px  rgba(128, 0, 128, 0.726);
+    border-radius: 6px;
+    -webkit-animation-name: login_anime;
+    -webkit-animation-duration: 0.4s;
+    animation-name: login_anime;
+    animation-duration: 0.4s;
+   
+}
+@keyframes login_anime{
+    from{
+        top:300px; opacity:0;  
+    }
+    to{
+        top:0;opacity: 1;
+    }
+}
+#create_form{
+    text-align: center;
+    width: 300px;
+    margin: auto;
+    padding: 3rem;
+    background-color: rgba(250, 245, 246, 0.774);
+    font-size: medium;
+    text-align: center;
+    z-index:200;
+    overflow-y: scroll;
+    border-radius: 5px;
+    box-shadow: 1px 1px 0px  rgba(128, 0, 128, 0.63);
+    border: solid 2px rgba(128, 0, 128, 0.185);
+
+    -webkit-animation-name: login_anime;
+    -webkit-animation-duration: 0.4s;
+    animation-name: login_anime;
+    animation-duration: 0.4s;
+
+}
+@media (min-width:520px) {
+    #create_account{
+        position:absolute;
+        right: 10%;left: 20%;
+        width:auto;
+    }
+    
+}
+
+   
+.names{
+    display: block;
+    margin-right:10.5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.create_form form .f_container{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px;
+    align-items: center;
+    
+}
+ #close{
+    position: absolute;
+    top:2px; right: 5px;
+    font-size: small;
+    color: blueviolet;
+    cursor:pointer;
+}
+ #close:hover{
+    color: brown;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+#searchform{
+    position: absolute;
+    top:3cm ;right:10px;
+    display:block; 
+   
+}
+#searchform form span{
+    padding: 0.2rem;
+    margin: 0.2rem;
+    color: rgb(245, 165, 165);
+
+}
+.gender{
+    text-align: left;
+    padding-left: 2.5rem;
+}
+
+
+/*cart sections*/
+
+.item{
+    display:flex;
+    background-color: rgb(250, 214, 238);
+    justify-content: space-between;
+    font-size:90%;
+    align-items: center;
+    box-shadow: 0.1rem 0.3rem 0.6em var(--boxshadow);
+    margin: 10px;
+
+}
+.cartitem{
+   
+    height:max-content;
+    font-size: 82%;
+   background-color: rgb(196, 245, 245);
+    margin-top: 5px;margin-left: 5px;margin-right: 0.2rem;margin-bottom: 5px;
+    
+}
+ .cartitem img{
+    width: 70px;
+    height: 70px;
+    margin:5px;
+    border-radius: 50%;
+ }
+ .cartitem .food {
+    text-align: center;
+    font-weight: 400;
+ }
+
+ .cart-content{
+    margin-top: 2px;
+    padding:3px;
+ }
+ .cart-content p{
+    text-align: center;
+
+ }
+ .cart-content .state {
+    display: flex;
+    justify-content: space-between;
+    
+    margin: 6px;
+ }
+.cart-content div {
+    margin-right: 15px;
+}
+.cart-content div input{
+    width: 50px;
+}
+#cart_data .title h3{
+    color: var(--headings);
+    font-size: small;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#cart_data .fa-times{
+   
+   position: absolute;
+}
+
+/*buttons*/
+
+button {
+    background-color: rgb(115, 3, 138);
+    color: white;
+    padding:2px;margin:2px;
+}
+button:hover {
+    background-color: aliceblue;
+    color:var(--boxshadow);
+    cursor:grab;
+    font-weight: bold;
+
+}
+
+/*menu section starts here */
+
+
+
+.neg-results{
+    text-align: center;
+    padding: 2.5rem;
+    margin: 1.5rem;
+}
+.sectcontainer{
+    padding:2px;
+    margin: 10px;
+}
+.row{
+    padding: 5px;
+    margin:2px;
+}
