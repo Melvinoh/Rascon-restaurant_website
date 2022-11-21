@@ -10,7 +10,7 @@ include('dbconnect.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rascon tastes</title>
     
-    <link rel="stylesheet" href="./fontawsome/css/all.min.css">
+    <link rel="stylesheet" href="./fontawsome/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/header.css"> 

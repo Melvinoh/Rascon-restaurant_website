@@ -50,8 +50,7 @@
             </span>
             
         </section>
-        <section class="mcontent">
-           
+        <section class="mcontent">   
             <div class="swiper myswipe3">
                 <?php   
                     $menu =''; 
@@ -84,7 +83,7 @@
                         }
                 ?>
                 <h3> <?php $category ?></h3>
-                <div class="menu swiper-wrapper">
+                <div class="menu">
                     <?php foreach($results as $row): ?>
                     <form action="" method="post"class="formdata swiper-slide">
                         <div class="<?php echo ($category) ?>">
@@ -111,7 +110,7 @@
                     </form>
                     <?php endforeach; ?>
                     <?php } ?>
-                </div>
+                    </div>
             </div>
             <div class="deals">
                 <div class="dcard">

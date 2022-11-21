@@ -1,5 +1,6 @@
     <section>
     <script src="./js/jquery-3.6.1.min.js"></script>
+    <script src="./js/all.min.js"></script>
     <script src="./js/effects.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
