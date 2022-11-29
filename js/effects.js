@@ -4,6 +4,7 @@ var creat_account = document.querySelector("create_account");
 var cart_data = document.querySelector("#cart_data");
 var searchform = document.querySelector('#searchform')
 
+
 window.onclick = (event)=>{
     if(event.target == nav ){
         nav.classList.remove('active');
@@ -30,6 +31,7 @@ document.querySelector("#user").onclick = ()=>{
 document.querySelector("#shoppingcart").onclick = ()=>{
     cart_data.classList.toggle('active');
     nav.classList.remove('active');
+    login_form.classList.remove('active');
     
 }
 document.querySelector("#search").onclick = ()=>{
@@ -51,9 +53,4 @@ document.querySelector("#close").onclick = ()=>{
     }
     
 }
-window.onscroll = ()=>{
-    document.querySelector(".header").style.backgroundColor ="blueviolet";
-    document.querySelector(".header").style.color = "white";
-}
-
 

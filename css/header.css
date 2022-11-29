@@ -92,28 +92,33 @@ body{
 
 .cat_nav {
     position: relative;
-    top: 8px;
+    top: 6px;
     display: inline-block;
+ 
     z-index: 1;
     padding-top: 0px;
     text-decoration: none;
  }
  #category-nav a{
-     display: block;
      text-decoration: none;
      color: blueviolet;
-     padding: 10px 0px;
+     padding: 2px 0px;
+     margin: 7px;
      background-color: azure;
+     display: inline-block;
  
  }
- #category-nav{
+ #category-nav{  
     position: absolute;
-    min-width: 6rem;
-    left: 70px;top: 30px;
+    left:37%;top:1.4cm;
+    z-index: 1000;
+    margin : 0 auto;
+    width: 40%;
     display: none;
+    padding: 10px;
     transform: scale(0);
     background: rgba(253, 244, 244, 0.3);
-    box-shadow: 1px 8px 3px 0 rgba(23, 2, 109, 0.37);
+    box-shadow: 1px 4px 3px 0 rgba(23, 2, 109, 0.37);
     backdrop-filter: blur( 10px );
     -webkit-backdrop-filter: blur( 10px );
     border-radius: 10px;
@@ -242,8 +247,8 @@ body{
 }
 #searchform{
     position: absolute;
-    top:3cm ;right:10px;
-    display:block; 
+    right:10px;
+    display:none; 
    
 }
 #searchform form span{

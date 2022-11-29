@@ -93,10 +93,6 @@
     
         <div class="del">
             <h1>best services </h1>
-            <div class="del-">
-                <img src="./pictures/menu pictures/delivery.gif" alt="">
-                <p>always on time Lorem ipsum dolor sit amet consectetur.</p>
-            </div>
         </div>
 
     </section>

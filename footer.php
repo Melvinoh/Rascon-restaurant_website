@@ -10,7 +10,7 @@
                 <div class="foot">
                     <a href="home.php">home</a>
                     <a href="about.php">about</a>
-                    <a href="menu.php">menu</a>
+                    <a href="menu2.php">menu</a>
                     <a href="reviews.php">reviews</a>
                     <a href="reviews.php#contacts">contacts </a>
                 </div>

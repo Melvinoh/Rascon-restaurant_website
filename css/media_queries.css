@@ -26,12 +26,14 @@
         padding: 5px;
         
     }
+    .header .link{
+        display: block;
+    }
    
     .header nav {
-        display: block;
         position:absolute;
-        top :1.7cm;right: 50%;left:0%;
-        margin:5px;
+        top :1.4cm;right: 60%;left:0%;
+        margin:2px;
         font-size: 4vw;
        
         text-align: center;
@@ -49,7 +51,7 @@
         border-top:solid 3px rgba(194, 125, 185, 0.596) ;
         color: rgb(50, 4, 94);;
     }
-    .header nav a{
+    .header nav .link a{
         display: block;
         margin-bottom: 15px;
         padding:5px;
@@ -59,10 +61,10 @@
     }
     #category-nav{
         position: absolute;
-        width: 150px;
         margin-bottom: 10px;
-      
-        left: 100px;top: 17px;
+        left:25%;top:10cm;
+        width : 75%;
+        display: inline-block;
        
         display: none;
 
@@ -102,7 +104,7 @@
         transform: rotate(180deg);
     }
     #cart_data{
-        position: fixed;
+        position:fixed;
         top: 12%;right:3px;left: 20%;
         background-color: aliceblue;
         height:100%;
@@ -329,7 +331,7 @@
     }
     #cart_data{
         position: fixed;
-        top: 12%;right:3px;left: 5%;
+        top: 11%;right:3px;left: 5%;
     }
 
     

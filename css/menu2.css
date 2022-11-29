@@ -2,6 +2,8 @@
 
 .mcontainer{
     display: flex;
+    margin: 5px;
+    padding: 5px;
 }
 
 
@@ -9,10 +11,11 @@
 .sidebar{
     position: relative;
     top:10px;left: 5px;right: 100%;
-    width:70%;
-    margin-top: 10px;
+    width:50%;
+    margin: 5px 10px 10px 2px;
+    padding: 10px;
     background-color: rgba(254, 254, 255, 0.219);
-    box-shadow: 1px 8px 3px 0 rgba(23, 2, 109, 0.37);
+    box-shadow: 1px 8px 3px 1px rgba(23, 2, 109, 0.37);
     backdrop-filter: blur( 10px );
     -webkit-backdrop-filter: blur( 10px );
     border-radius: 10px;
@@ -20,6 +23,7 @@
     backface-visibility: unset;
     
     border-top:solid 3px rgba(201, 159, 195, 0.486) ;
+    border-left: solid 1px rgba(209, 131, 190, 0.637);
 }
 .sidebar .search{
     margin: 10px auto;
@@ -36,8 +40,7 @@
 .sidebar .filter{
     margin: 10px auto;
     background-color: rgb(92, 16, 66);
-    padding: 10px;
-    width: 92%;
+    padding: 5px;
     border-radius: 10px;
 }
 .sidebar .filter div{
@@ -55,7 +58,7 @@
 .sidebar  input{
     width: 95%;
     border-radius: 5px;
-    margin: 2px auto;
+    margin: 10px auto;
     padding: 5px;
 }
 .sidebar .filter a {
@@ -80,7 +83,7 @@
 .sidebar .mcategories{
     margin: 10px auto;
     padding: 5px;
-    width: 90%;
+    width: 95%;
     border:solid 2px  rgb(235, 235, 250);
     border-radius: 10px;
 
@@ -93,7 +96,7 @@
 }
 .sidebar .mcategories .mcat {
     margin: 10px auto;
-    width: 85%;
+    width: 95%;
     background-color: white;
     border-radius: 10px;
     padding: 2px 0px;
@@ -172,7 +175,6 @@
     transform: translate(-1rem -0.5rem) rotate(5deg);
 
   }
-
   .deals .dcard:not(:first-child) {
     margin-left: -100px;
     box-shadow: -3rem 0 3rem -2rem rgb(51, 50, 50);
@@ -217,21 +219,17 @@
     }
 
 }
-.mcontainer .menu{
-    margin: 0.2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(4.0cm ,1fr));
-    gap: 10px;
-
-
-}
 .mcontainer .menu {
     margin: 0.5rem 0;
+    display: grid;
+    gap: 10px;
     border-radius: 20px;
     justify-content: center;
-    height: 125vh;
-    overflow: scroll;
+    height: 90vh;
+    overflow-y: scroll;
     border-top: solid 3px rgba(163, 40, 163, 0.267);
+    border-left: solid 2px rgba(163, 40, 163, 0.116) ;
+    grid-template-columns: repeat(auto-fit,minmax(5.0cm ,1fr));
   
 }
 .mcontainer .menu img{

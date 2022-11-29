@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('dbconnect.php');
+include('dbconnect.php')
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +10,7 @@ include('dbconnect.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rascon tastes</title>
     
-    <link rel="stylesheet" href="./fontawsome/all.min.css">
+    <link rel="stylesheet" href="./fontawsome/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/header.css"> 
@@ -20,7 +20,7 @@ include('dbconnect.php');
     <link rel="stylesheet" href="./css/reviews.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/menu.css">
-    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/menu2.css">
     <link rel="stylesheet" href="./css/checkout.css">
 
     <script src="./js/jquery-3.6.1.min.js"></script>
@@ -35,23 +35,20 @@ include('dbconnect.php');
             <i class="fas fa-utensils fa-sl"></i>
         </div>
         <nav id="nav">
-            <a href="landing.php">home</a>
-            <a href="about.php">about</a>
-            <a href="mlayout.php">menu</a>
-            <a href="reviews.php">reviews</a>
-            <a href="reviews.php#contacts">contacts </a>
-        
-            <div class="cat_nav">
-                <div class="cat">
-                    <a href="#cart_data.php">category<i class="fa fa-caret-down" onmouseover="document.getElementById('category-nav').classList.toggle('active')"></i></a>
-                </div>  
-                <div id="category-nav">
-                    <a href="">chicken</a>
-                    <a href="">chicken</a>
-                    <a href="">chicken</a>
-                    <a href="">chicken</a>
+            <div class="link">
+                <a href="home.php">home</a>
+                <a href="about.php">about</a>
+                <a href="menu2.php">menu</a>
+                <a href="reviews.php">reviews</a>
+                <a href="reviews.php#contacts">contacts </a>
+                <div class="cat_nav">
+                    <div class="cat">
+                        <a href="#cart_data.php">category<i class="fa fa-caret-down" onmouseover="document.getElementById('category-nav').classList.toggle('active')"></i></a>
+                    </div>  
                 </div>
+
             </div>
+          
         </nav>
         <span class="icons">
             
@@ -60,7 +57,22 @@ include('dbconnect.php');
             <i class="fas fa-shopping-cart" id ="shoppingcart" onclick=""></i>
             <span id="count"> 0</span>
         </span>
+    
     </header>
+    <div id="category-nav">
+        <?php
+            $sql ="SELECT * FROM category_table ";
+            $results =$conn->query($sql);
+            $row = $results->fetch_assoc();  
+        ?>
+        <h5>categories</h5>
+        <?php foreach($results as $row): ?>
+            <a href="menu2.php?f=<?php echo ($row['cat_name']) ?>"></a>
+            <a href="menu2.php?f=<?php echo ($row['cat_name']) ?>"> <h6><?php echo ($row['cat_name']) ?></h6></a>   
+        <?php endforeach; ?> 
+                
+    </div>
+
     <div class="modal" id="login_form">
         <h5>welcome to rascon Tastes</h5><br>
         <div id ="alert"></div>

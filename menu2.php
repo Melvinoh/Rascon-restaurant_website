@@ -1,16 +1,16 @@
 <?php include("header.php")?>
 <body>
+
     <section class="mcontainer">
         <section class="sidebar">
             <div class="filters">
-                <div id="searchform">
+                <div id="search_form">
                     <form action="" method="post" id="search">
-                        <input type="submit" value="submit" onkeyup = ""> 
                         <input type="text" placeholder="search here" name="search"  >
                     </form>
                 </div>
                 <div class="profile">
-                   
+                   \
                     <i class="fas fa-user"></i>
                     <span>kamau johnsone </span>
                     <button> login</button>
@@ -26,7 +26,6 @@
                     </select>
                     
                 </div>
-                 
             </div>
             <div class="mcategories">
                  <?php
@@ -34,11 +33,11 @@
                     $results =$conn->query($sql);
                     $row = $results->fetch_assoc();  
                 ?>
-                <h3>categories</h3>
+                <h5>categories</h5>
                 <?php foreach($results as $row): ?>
                     <div class="mcat">
-                    <a href="mlayout.php?f=<?php echo ($row['cat_name']) ?>"><?php echo '<img src="./pictures/menu pictures/'.$row['url_image'].'" alt="">'?></a>
-                    <a href="mlayout.php?f=<?php echo ($row['cat_name']) ?>"> <h6><?php echo ($row['cat_name']) ?></h6></a>   
+                    <a href="menu2.php?f=<?php echo ($row['cat_name']) ?>"><?php echo '<img src="./pictures/menu pictures/'.$row['url_image'].'" alt="">'?></a>
+                    <a href="menu2.php?f=<?php echo ($row['cat_name']) ?>"> <h6><?php echo ($row['cat_name']) ?></h6></a>   
                         <p> tastey foods </p>
                     </div>
                 <?php endforeach; ?> 
@@ -51,7 +50,7 @@
             
         </section>
         <section class="mcontent">   
-            <div class="swiper myswipe3">
+            <section class="swiper myswipe3">
                 <?php   
                     $menu =''; 
                     if (isset($_GET['f'])){
@@ -60,7 +59,7 @@
                         $results = $conn->query($sql);
                         $row = $results->fetch_assoc();
                     }else{
-                        $sql = "SELECT * FROM food_menu limit 30";
+                        $sql = "SELECT * FROM food_menu limit 20";
                         $results =$conn->query($sql);
                         $row = $results->fetch_assoc();         
                     }
@@ -83,16 +82,16 @@
                         }
                 ?>
                 <h3> <?php $category ?></h3>
-                <div class="menu">
+                <section class="menu">
                     <?php foreach($results as $row): ?>
                     <form action="" method="post"class="formdata swiper-slide">
-                        <div class="<?php echo ($category) ?>">
+                        <div class="<?php echo($category) ?>">
                             <i class="fas fa-shopping-cart"></i>
                             <i class="fas fa-heart"></i><br>
-                            <a href="#productdetails.php?f='.$row['food_name'].'"><h5 class="foodname"><?php echo ($row['food_name']) ?></h5></a>
-                            <a href="#productdetails.php?f='.$row['food_name'].'"><?php echo '<img src="./pictures/menu pictures/'.$row['url_image'].'" alt="">'?></a>
+                            <a href="#productdetails.php?f=<?php echo ($row['food_name']) ?>"><h5 class="foodname"><?php echo ($row['food_name']) ?></h5></a>
+                            <a href="#productdetails.php?f='<?php echo ($row['food_name']) ?>"><img src="./pictures/menu pictures/<?php echo ($row['url_image']) ?>" alt=""></a>
                             <div class="content">
-                            <a href="#productdetails.php?f='.$row['food_name'].'"><p>Lorem ipsum dolor sit amet.</p></a>
+                            <a href="#productdetails.php?f=<?php echo ($row['food_name']) ?>'"><p>Lorem ipsum dolor sit amet.</p></a>
                                 <i class="fas fa-star fa-sl"></i>
                                 <i class="fas fa-star fa-sl"></i>
                                 <i class="fas fa-star fa-sl"></i>
@@ -110,8 +109,8 @@
                     </form>
                     <?php endforeach; ?>
                     <?php } ?>
-                    </div>
-            </div>
+                </section>
+            </section>
             <div class="deals">
                 <div class="dcard">
                     <h4>pinacols</h4>
